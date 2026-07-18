@@ -148,8 +148,6 @@
 
 /* KEUNGGULAN */
 
-/* keunggulan */
-
 .section-title {
 
     font-size: clamp(2rem, 1.5rem + 1vw, 3rem);
@@ -225,10 +223,200 @@
 
 }
 
+.achievement-box {
+
+    background: #fff;
+
+    padding: 50px 30px;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, .08);
+
+}
+
+
+
+.achievement-number {
+
+    font-size: clamp(3rem, 2rem+3vw, 5rem);
+
+    font-weight: 800;
+
+    color: #ffc107;
+
+}
+
+
+
+.achievement-box h4 {
+
+    font-weight: 700;
+
+}
+
+
+
+.achievement-box p {
+
+    color: #6c757d;
+
+}
+
+
+
+.achievement-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+}
+
+
+
+.achievement-item {
+
+    background: #fff;
+
+    padding: 25px;
+
+    border-radius: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    transition: .3s;
+
+}
+
+
+
+.achievement-item:hover {
+
+    transform: translateX(10px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, .08);
+
+}
+
+
+
+.achievement-icon {
+
+    width: 60px;
+
+    height: 60px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #fff3cd;
+
+    color: #ffc107;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+
+}
+
+
+
+.achievement-item h5 {
+
+    font-weight: 700;
+
+}
+
+
+
+.achievement-item p {
+
+    margin: 0;
+
+    color: #6c757d;
+
+}
+
+
+/* galeri */
+
+.gallery-section {
+
+    background: #fff;
+
+}
+
+
+
+.filter-wrapper {
+
+    overflow-x: auto;
+
+}
+
+
+
+.gallery-filter {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    min-width: max-content;
+
+}
+
+
+
+.filter-btn {
+
+    border: none;
+
+    padding: 10px 25px;
+
+    border-radius: 50px;
+
+    background: #f1f5ff;
+
+    color: #0d6efd;
+
+    font-weight: 600;
+
+    transition: .3s;
+
+}
+
+
+
+.filter-btn:hover,
+.filter-btn.active {
+
+
+    background: #0d6efd;
+
+    color: white;
+
+
+}
+
 
 /* PENGUMUMAN */
-
-/* pengumuman */
 
 .announcement-section {
 
