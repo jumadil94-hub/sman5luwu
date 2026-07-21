@@ -1,233 +1,162 @@
-        document.addEventListener("DOMContentLoaded", () => {
+/**
+ * =====================================================
+ * main.js
+ * Website Sekolah
+ * =====================================================
+ */
 
+document.addEventListener("DOMContentLoaded", initApp);
 
-            AOS
+/**
+ * Entry Point
+ */
+function initApp() {
+    initAOS();
+    initGalleryFilter();
+    initTeacherFilter();
+    initLightbox();
+    initFooter();
+}
 
-            AOS.init({
+/* =====================================================
+   AOS
+===================================================== */
 
-                duration: 800,
+function initAOS() {
+    if (typeof AOS === "undefined") return;
 
-                once: true
+    AOS.init({
+        duration: 800,
+        once: true
+    });
+}
 
+/* =====================================================
+   ISOTOPE (Reusable)
+===================================================== */
+
+function createIsotopeFilter({
+    container,
+    itemSelector,
+    buttonSelector
+}) {
+    if (typeof Isotope === "undefined") return;
+
+    const grid = document.querySelector(container);
+
+    if (!grid) return;
+
+    const buttons = document.querySelectorAll(buttonSelector);
+
+    if (!buttons.length) return;
+
+    const isotope = new Isotope(grid, {
+        itemSelector,
+        layoutMode: "fitRows"
+    });
+
+    buttons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            const filter = button.dataset.filter || "*";
+
+            isotope.arrange({
+                filter
             });
 
-
-
-
-            // ISOTOPE
-
-            const grid =
-                document.querySelector('.gallery-container');
-
-
-
-            const iso =
-                new Isotope(grid, {
-
-                    itemSelector: '.gallery-item',
-
-                    layoutMode: 'fitRows'
-
-                });
-
-
-
-
-
-            const buttons =
-                document.querySelectorAll('.filter-btn');
-
-
-
-            buttons.forEach(button => {
-
-
-                button.addEventListener('click', () => {
-
-
-                    let filter =
-                        button.dataset.filter;
-
-
-
-                    iso.arrange({
-
-                        filter: filter
-
-                    });
-
-
-
-
-                    // active state
-
-                    buttons.forEach(btn => {
-
-                        btn.classList.remove('active');
-
-                    });
-
-
-                    button.classList.add('active');
-
-
-
-                });
-
-
-            });
-
-
-
-
-
-            // LIGHTBOX
-
-
-            const lightbox =
-                GLightbox({
-
-                    selector: '.glightbox',
-
-                    touchNavigation: true,
-
-                    loop: true
-
-                });
-
-
-            // guru dan tenagakependidikan
-
-            const teacherGrid =
-                document.querySelector('.teacher-container');
-
-
-            const teacherIso =
-                new Isotope(
-                    teacherGrid,
-                    {
-
-                        itemSelector: '.teacher-item',
-
-                        layoutMode: 'fitRows'
-
-                    });
-
-
-
-            const teacherButtons =
-                document.querySelectorAll('.teacher-btn');
-
-
-
-            teacherButtons.forEach(btn => {
-
-
-                btn.addEventListener('click', () => {
-
-
-                    teacherIso.arrange({
-
-                        filter: btn.dataset.filter
-
-                    });
-
-
-
-                    teacherButtons.forEach(b => {
-
-                        b.classList.remove('active');
-
-                    });
-
-
-                    btn.classList.add('active');
-
-
-
-                });
-
-
-            });
-
-
-            // kontak
-
-            const form =
-                document.querySelector('.contact-form form');
-
-
-            form.addEventListener('submit', (e) => {
-
-                e.preventDefault();
-
-
-                const button =
-                    form.querySelector('button');
-
-
-                button.innerHTML =
-                    "⏳ Mengirim...";
-
-
-                setTimeout(() => {
-
-
-                    button.innerHTML =
-                        "✓ Terkirim";
-
-
-                }, 1500);
-
-
-            });
-
-
-            // footer
-
-
-            // fungsi tahun otomatis
-            document.getElementById("year").innerHTML =
-                new Date().getFullYear();
-
-            // fungsi top-up
-
-            const backTop =
-                document.getElementById("backTop");
-
-
-            window.addEventListener("scroll", () => {
-
-
-                if (window.scrollY > 500) {
-
-                    backTop.classList.add("show");
-
-                }
-
-                else {
-
-                    backTop.classList.remove("show");
-
-                }
-
-
-            });
-
-
-
-            backTop.addEventListener("click", () => {
-
-
-                window.scrollTo({
-
-                    top: 0,
-
-                    behavior: "smooth"
-
-                });
-
-
-            });
+            buttons.forEach(btn =>
+                btn.classList.remove("active")
+            );
+
+            button.classList.add("active");
 
         });
+
+    });
+}
+
+function initGalleryFilter() {
+
+    createIsotopeFilter({
+        container: ".gallery-container",
+        itemSelector: ".gallery-item",
+        buttonSelector: ".filter-btn"
+    });
+
+}
+
+function initTeacherFilter() {
+
+    createIsotopeFilter({
+        container: ".teacher-container",
+        itemSelector: ".teacher-item",
+        buttonSelector: ".teacher-btn"
+    });
+
+}
+
+/* =====================================================
+   GLIGHTBOX
+===================================================== */
+
+function initLightbox() {
+
+    if (typeof GLightbox === "undefined") return;
+
+    GLightbox({
+        selector: ".glightbox",
+        touchNavigation: true,
+        loop: true
+    });
+
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+function initFooter() {
+    updateCopyrightYear();
+    initBackToTop();
+}
+
+function updateCopyrightYear() {
+
+    const year = document.getElementById("year");
+
+    if (!year) return;
+
+    year.textContent = new Date().getFullYear();
+
+}
+
+/* =====================================================
+   BACK TO TOP
+===================================================== */
+
+function initBackToTop() {
+
+    const button = document.getElementById("backTop");
+
+    if (!button) return;
+
+    window.addEventListener("scroll", () => {
+
+        button.classList.toggle(
+            "show",
+            window.scrollY > 500
+        );
+
+    });
+
+    button.addEventListener("click", () => {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
+
+}
