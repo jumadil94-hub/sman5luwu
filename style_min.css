@@ -148,6 +148,8 @@
 
 /* KEUNGGULAN */
 
+/* keunggulan */
+
 .section-title {
 
     font-size: clamp(2rem, 1.5rem + 1vw, 3rem);
@@ -223,200 +225,10 @@
 
 }
 
-.achievement-box {
-
-    background: #fff;
-
-    padding: 50px 30px;
-
-    border-radius: 25px;
-
-    box-shadow:
-        0 15px 35px rgba(0, 0, 0, .08);
-
-}
-
-
-
-.achievement-number {
-
-    font-size: clamp(3rem, 2rem+3vw, 5rem);
-
-    font-weight: 800;
-
-    color: #ffc107;
-
-}
-
-
-
-.achievement-box h4 {
-
-    font-weight: 700;
-
-}
-
-
-
-.achievement-box p {
-
-    color: #6c757d;
-
-}
-
-
-
-.achievement-list {
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 20px;
-
-}
-
-
-
-.achievement-item {
-
-    background: #fff;
-
-    padding: 25px;
-
-    border-radius: 18px;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 20px;
-
-    transition: .3s;
-
-}
-
-
-
-.achievement-item:hover {
-
-    transform: translateX(10px);
-
-    box-shadow:
-        0 10px 25px rgba(0, 0, 0, .08);
-
-}
-
-
-
-.achievement-icon {
-
-    width: 60px;
-
-    height: 60px;
-
-    flex-shrink: 0;
-
-    border-radius: 50%;
-
-    background: #fff3cd;
-
-    color: #ffc107;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    font-size: 25px;
-
-}
-
-
-
-.achievement-item h5 {
-
-    font-weight: 700;
-
-}
-
-
-
-.achievement-item p {
-
-    margin: 0;
-
-    color: #6c757d;
-
-}
-
-
-/* galeri */
-
-.gallery-section {
-
-    background: #fff;
-
-}
-
-
-
-.filter-wrapper {
-
-    overflow-x: auto;
-
-}
-
-
-
-.gallery-filter {
-
-    display: flex;
-
-    justify-content: center;
-
-    gap: 10px;
-
-    min-width: max-content;
-
-}
-
-
-
-.filter-btn {
-
-    border: none;
-
-    padding: 10px 25px;
-
-    border-radius: 50px;
-
-    background: #f1f5ff;
-
-    color: #0d6efd;
-
-    font-weight: 600;
-
-    transition: .3s;
-
-}
-
-
-
-.filter-btn:hover,
-.filter-btn.active {
-
-
-    background: #0d6efd;
-
-    color: white;
-
-
-}
-
 
 /* PENGUMUMAN */
+
+/* pengumuman */
 
 .announcement-section {
 
@@ -793,151 +605,158 @@
 }
 
 
-/* GALERI */
 
-.gallery-box {
-
-    display: block;
-
-    height: 300px;
-
-    border-radius: 20px;
-
-    overflow: hidden;
-
-    cursor: pointer;
-
-}
+/* PRESTASI */
 
 
+.achievement-box {
 
+    background: #fff;
 
+    padding: 50px 30px;
 
+    border-radius: 25px;
 
-.gallery-box img {
-
-
-    width: 100%;
-
-    height: 100%;
-
-    object-fit: cover;
-
-    transition:
-        transform .6s ease;
-
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, .08);
 
 }
 
 
 
-.gallery-box:hover img {
+.achievement-number {
 
-    transform: scale(1.15);
+    font-size: clamp(3rem, 2rem+3vw, 5rem);
+
+    font-weight: 800;
+
+    color: #ffc107;
 
 }
 
 
 
-.filter-wapper {
-    overflow: hidden;
-}
+.achievement-box h4 {
 
+    font-weight: 700;
 
-.gallery-filter {
-    display: flex;
-    flex-wrap: wrap;
-    min-width: unset;
 }
 
 
 
-.gallery-overlay {
+.achievement-box p {
+
+    color: #6c757d;
+
+}
 
 
-    position: absolute;
 
-    inset: 0;
-
+.achievement-list {
 
     display: flex;
 
     flex-direction: column;
 
-    justify-content: end;
+    gap: 20px;
 
+}
+
+
+
+.achievement-item {
+
+    background: #fff;
 
     padding: 25px;
 
-    overflow: hidden;
-    background:
-        linear-gradient(transparent,
-            rgba(0, 0, 0, .75));
+    border-radius: 18px;
 
+    display: flex;
 
-    opacity: 0;
+    align-items: center;
 
+    gap: 20px;
 
-    transition: .4s;
-
+    transition: .3s;
 
 }
 
 
 
-.gallery-box:hover .gallery-overlay {
+.achievement-item:hover {
 
-    opacity: 1;
+    transform: translateX(10px);
 
-}
-
-
-
-.gallery-overlay span {
-
-
-    background: #0d6efd;
-
-    color: white;
-
-    font-size: .8rem;
-
-    padding: 5px 15px;
-
-    border-radius: 20px;
-
-    width: max-content;
-
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, .08);
 
 }
 
 
 
-.gallery-overlay h5 {
+.achievement-icon {
+
+    width: 60px;
+
+    height: 60px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #fff3cd;
+
+    color: #ffc107;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+
+}
 
 
-    color: white;
 
-    margin-top: 10px;
+.achievement-item h5 {
 
     font-weight: 700;
 
+}
+
+
+
+.achievement-item p {
+
+    margin: 0;
+
+    color: #6c757d;
 
 }
 
 
-.gallery-item {
+/* galeri */
 
-    transition:
-        transform .4s,
-        opacity .4s;
+.gallery-section {
+
+    background: #fff;
 
 }
 
 
-/* GURU DAN TENDIK */
 
-.teacher-filter {
+.filter-wrapper {
+
+    overflow-x: auto;
+
+}
+
+
+
+.gallery-filter {
 
     display: flex;
 
@@ -945,14 +764,13 @@
 
     gap: 10px;
 
-    flex-wrap: wrap;
+    min-width: max-content;
 
 }
 
 
 
-.teacher-btn {
-
+.filter-btn {
 
     border: none;
 
@@ -960,24 +778,20 @@
 
     border-radius: 50px;
 
-
-    background: #fff;
+    background: #f1f5ff;
 
     color: #0d6efd;
 
-
     font-weight: 600;
 
-
     transition: .3s;
-
 
 }
 
 
 
-.teacher-btn.active,
-.teacher-btn:hover {
+.filter-btn:hover,
+.filter-btn.active {
 
 
     background: #0d6efd;
@@ -989,140 +803,350 @@
 
 
 
+/* GALERI DAN GURU */
 
 
-.teacher-card {
+/* =====================================
+GLOBAL SCALE
+===================================== */
 
 
-    background: white;
+.section-title{
+
+font-size:
+clamp(1.8rem,3vw,2.8rem);
+
+font-weight:700;
+
+letter-spacing:-.03em;
+
+}
 
 
-    border-radius: 25px;
+
+.section-subtitle{
+
+font-size:
+clamp(.9rem,1.5vw,1.15rem);
+
+color:#6c757d;
+
+max-width:700px;
+
+margin:auto;
+
+}
 
 
-    overflow: hidden;
+/* =====================================
+BADGE
+===================================== */
 
 
-    height: 100%;
+.badge-section{
+
+display:inline-flex;
+
+padding:
+clamp(.45rem,.8vw,.7rem)
+clamp(1rem,2vw,1.5rem);
 
 
-    box-shadow:
+border-radius:999px;
 
-        0 10px 30px rgba(0, 0, 0, .05);
+background:
+rgba(13,110,253,.1);
+
+color:#0d6efd;
+
+font-weight:600;
+
+}
 
 
-    transition: .4s;
+
+/* =====================================
+FILTER
+===================================== */
+
+
+.filter-group{
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:clamp(.5rem,1vw,1rem);
+
+}
+
+
+
+.filter-btn,
+.teacher-btn{
+
+
+border:0;
+
+
+padding:
+
+clamp(.55rem,1vw,.8rem)
+
+clamp(1rem,2vw,1.8rem);
+
+
+
+border-radius:50rem;
+
+
+background:white;
+
+
+font-weight:600;
+
+
+color:#495057;
+
+
+box-shadow:
+0 8px 20px rgba(0,0,0,.08);
+
+
+transition:.3s;
 
 
 }
 
 
 
-.teacher-card:hover {
+.filter-btn:hover,
+.teacher-btn:hover{
 
 
-    transform: translateY(-10px);
+background:#0d6efd;
 
+color:white;
 
-    box-shadow:
-
-        0 20px 40px rgba(0, 0, 0, .12);
-
-
-}
-
-
-
-
-
-
-.teacher-image {
-
-
-    height: 300px;
-
-    overflow: hidden;
+transform:translateY(-3px);
 
 
 }
 
 
 
-.teacher-image img {
+.filter-btn.active,
+.teacher-btn.active{
 
 
-    width: 100%;
+background:#0d6efd;
 
-    height: 100%;
-
-    object-fit: cover;
-
-    object-position: 100% 20%;
-
-    transition: .5s;
+color:white;
 
 
 }
 
 
 
-.teacher-card:hover img {
+/* =====================================
+GALLERY
+===================================== */
 
 
-    transform: scale(1.1);
+.gallery-card{
 
 
-}
+display:block;
+
+position:relative;
+
+overflow:hidden;
 
 
+border-radius:
+
+clamp(1rem,2vw,1.5rem);
 
 
-
-.teacher-content {
-
-
-    padding: 25px;
-
-    text-align: center;
+aspect-ratio:4/3;
 
 
-}
-
-
-
-.teacher-content h4 {
-
-
-    font-size: 1.2rem;
-
-    font-weight: 700;
+box-shadow:
+0 15px 35px rgba(0,0,0,.12);
 
 
 }
 
 
 
-.teacher-content span {
+.gallery-card img{
 
 
-    color: #0d6efd;
+width:100%;
 
-    font-weight: 600;
+height:100%;
+
+object-fit:cover;
+
+
+transition:.5s;
+
+
+}
+
+
+
+.gallery-card:hover img{
+
+
+transform:scale(1.08);
 
 
 }
 
 
 
-.teacher-content p {
+/* OVERLAY */
 
 
-    color: #6c757d;
+.gallery-overlay{
 
-    margin-top: 10px;
+
+position:absolute;
+
+inset:0;
+
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:end;
+
+
+padding:
+clamp(1rem,3vw,2rem);
+
+
+
+color:white;
+
+
+background:
+linear-gradient(
+transparent,
+rgba(0,0,0,.8)
+);
 
 
 }
+
+
+
+/* =====================================
+TEACHER CARD
+===================================== */
+
+
+.teacher-card{
+
+
+height:100%;
+
+
+background:white;
+
+
+border-radius:
+clamp(1rem,2vw,1.5rem);
+
+
+overflow:hidden;
+
+
+box-shadow:
+0 15px 35px rgba(0,0,0,.08);
+
+
+transition:.35s;
+
+
+}
+
+
+
+.teacher-card:hover{
+
+
+transform:translateY(-8px);
+
+
+}
+
+
+
+.teacher-image{
+
+
+aspect-ratio:1;
+
+
+overflow:hidden;
+
+
+}
+
+
+
+.teacher-image img{
+
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+
+}
+
+
+
+.teacher-content{
+
+
+padding:
+
+clamp(1rem,3vw,2rem);
+
+
+}
+
+
+.teacher-content h4{
+
+
+font-size:
+
+clamp(1rem,2vw,1.4rem);
+
+
+}
+
+
+.teacher-content span{
+
+
+color:#0d6efd;
+
+font-weight:600;
+
+
+}
+
+
 
 /* KONTAK */
 
