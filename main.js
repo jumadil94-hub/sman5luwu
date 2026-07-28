@@ -15,6 +15,7 @@ function initApp() {
     initGalleryFilter();
     initTeacherFilter();
     initLightbox();
+    initContact();
     initFooter();
 }
 
@@ -27,7 +28,9 @@ function initAOS() {
 
     AOS.init({
         duration: 800,
-        once: true
+        easing: "ease-out-cubic",
+        once: true,
+        offset: 80
     });
 }
 
@@ -130,6 +133,30 @@ function updateCopyrightYear() {
     year.textContent = new Date().getFullYear();
 
 }
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+function initContact() {
+
+    const contact = {
+        address: "Luwu, Sulawesi Selatan",
+        phone: "(0471) 123456",
+        email: "info@sman5luwu.sch.id"
+    };
+
+    const address = document.getElementById("footer-address");
+    const phone = document.getElementById("footer-phone");
+    const email = document.getElementById("footer-email");
+
+    if (address) address.textContent = contact.address;
+    if (phone) phone.textContent = contact.phone;
+    if (email) email.textContent = contact.email;
+
+}
+
 
 /* =====================================================
    BACK TO TOP
